@@ -28,7 +28,7 @@ Navigate to [oracle.com](https://www.oracle.com/java/technologies/downloads/#jdk
 
 # Quickstart
 
-Create a file `Main.java`:
+Create a class file `Main.java`:
 
 ```java
 public class Main {

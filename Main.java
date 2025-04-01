@@ -1,37 +1,72 @@
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        int x = 1;
-        int y = 2;
-        System.out.println(x+y);
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
 
+            System.out.println("""
+                    Calculator App
+                    1. Add
+                    2. Subtract
+                    3. Multiply
+                    4. Divide
+                    5. Exit
 
-        String apple;
-        String orange = "orange";
-        apple = "apple";
-        System.out.println(apple + " " + orange);
-        
-        if (apple == orange) 
-        {
-            System.out.println("your da sells avon");
+                    Please enter your option
+                    """);
+            int user_choice = scanner.nextInt();
+
+            switch (user_choice) {
+                case 1:
+                    System.out.println("Give first number");
+                    int x = scanner.nextInt();
+                    System.out.println("Give second number");
+                    int y = scanner.nextInt();
+                    System.out.println("Output: " + add(x, y));
+                    break;
+                case 2:
+                    System.out.println("Give first number");
+                    x = scanner.nextInt();
+                    System.out.println("Give second number");
+                    y = scanner.nextInt();
+                    System.out.println("Output: " + subtract(x, y));
+                    break;
+                case 3:
+                    System.out.println("Give first number");
+                    x = scanner.nextInt();
+                    System.out.println("Give second number");
+                    y = scanner.nextInt();
+                    System.out.println("Output: " + multiply(x, y));
+                    break;
+                case 4:
+                    System.out.println("Give first number");
+                    x = scanner.nextInt();
+                    System.out.println("Give second number");
+                    y = scanner.nextInt();
+                    System.out.println("Output: " + divide(x, y));
+                    break;
+                    case 5:
+                    System.exit(0);
+                default: System.err.println("Please enter valid data");
+            }
         }
-        else 
-        {
-            System.out.println("your ma sells avon");
-        }
-        
-        int[] trump = {69, 420, 13, 1911, 3008, 21, 96};
-        for (int i = 0; i < trump.length; i++)
-        {
-           // System.out.println(trump[i]);
-        }
-        for (
-        int i = trump.length - 1;  // start point
-        i >= 0; // terminates if false
-        i-- // what to do to i after each loop
-        )
-        {
-            System.out.println(trump[i]);
-        }
-        System.out.println("Hello, world.");
+    }
+
+    private static int add(int x, int y) {
+        return (x + y);
+    }
+
+    private static int subtract(int x, int y) {
+        return (x - y);
+    }
+
+    private static int multiply(int x, int y) {
+        return (x * y);
+    }
+
+    private static int divide(int x, int y) {
+        return (x / y);
     }
 }
